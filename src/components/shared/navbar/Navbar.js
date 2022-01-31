@@ -49,7 +49,7 @@ const Navbar = ({open}) => {
         <Nav open={open}>
             <ul>
                 <li><Link to='/'>Home</Link></li>
-                <li><Link to='/'>Home</Link></li>
+                <li><Link to='/'>Games</Link></li>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/'>Home</Link></li>
             </ul>
