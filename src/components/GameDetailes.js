@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 // Styles
 import styles from './Styles/GameDetailes.module.css';
 // Components
 import ConsolImage from './shared/ConsolImage';
+// Context
+import { WishContext } from '../context/WishContextProvider';
+// Function
+import { isInList } from '../helper/functions';
 
 const GameDetailes = ({data}) => {
+
+    const { state, dispatch } = useContext(WishContext);
+    console.log(state);
+    const {id} = data
+    
     
     return (
         <div className={styles.container}>
@@ -36,7 +45,11 @@ const GameDetailes = ({data}) => {
                         }
                     </div>
                     <div className={styles.btns}>
-                        <button>ADD TO WISHLIST</button>
+                        {
+                        isInList(state, id) ?
+                        <button onClick={() => dispatch({type: "ADD_ITEM", payload: data })}>ADD TO WISHLIST</button> :
+                        <button onClick={() => dispatch({type: "REMOVE_ITEM", payload: data })}>REMOVE ITEM</button>
+                        }
                     </div>
                 </div>
                 <div className={styles.screenshots}>

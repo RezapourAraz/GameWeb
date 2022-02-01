@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 // Context
 import GamesContextProvider from "./context/GamesContextProvider";
 import PopularContextProvider from "./context/PopularContextProvider";
+import WishContextProvider from "./context/WishContextProvider";
 // Components
 import Landing from "./pages/Landing";
 import Games from "./pages/Games";
@@ -10,11 +11,13 @@ function App() {
   return (
     <GamesContextProvider>
       <PopularContextProvider>
-        <Routes>
-          <Route path='/' element={<Landing />} />
-          <Route path='/games' element={<Games />} />
-          <Route path='/detaile/:id' element={<Detaile />} />
-        </Routes>
+        <WishContextProvider>
+          <Routes>
+            <Route path='/' element={<Landing />} />
+            <Route path='/games' element={<Games />} />
+            <Route path='/detaile/:id' element={<Detaile />} />
+          </Routes>
+        </WishContextProvider>
       </PopularContextProvider>
     </GamesContextProvider>
   );

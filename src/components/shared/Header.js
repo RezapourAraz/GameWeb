@@ -3,8 +3,8 @@ import React from 'react';
 import Hamburger from './navbar/Hamburger';
 // Icons
 import searchIcon from '../../assets/icons/search1.svg';
-import shoppingIcon from '../../assets/icons/shopping-bag.svg';
-import userIcon from '../../assets/icons/user3.svg';
+import heart from '../../assets/icons/heart.svg';
+import userIcon from '../../assets/icons/user.svg';
 // Styles
 import styles from './Header.module.css';
 
@@ -25,7 +25,7 @@ const Header = () => {
                     <img src={userIcon} alt="User Icon" />
                 </div>
                 <div className={styles.shoppingBtn}>
-                    <img src={shoppingIcon} alt="Shopping Bag Icon" />
+                    <img src={heart} alt="Shopping Bag Icon" />
                     <span>1</span>
                 </div>
             </div>

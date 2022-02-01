@@ -9,4 +9,9 @@ const getTopRank = (games) => {
     return tops;
 }
 
-export {getTopRank};
+const isInList = (state, id) => {
+    const result = !state.wishList.find(item => item.id === id)
+    return result;
+}
+
+export {getTopRank, isInList};
