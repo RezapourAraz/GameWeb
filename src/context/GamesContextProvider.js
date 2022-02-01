@@ -10,7 +10,7 @@ const GamesContextProvider = ({children}) => {
     const [ games, setGames ] = useState([]);
     useEffect(() => {
         const fetchAPI = async () => {
-            setGames(await getGames());
+            setGames(await getGames("games"));
         }
         fetchAPI();
     },[]);

@@ -82,7 +82,7 @@ const Banner = ({items}) => {
                         <div key={item.id} className={ index === slideIndex  ? "slide active-anim" : "slide "}>
                             <span className='title'>{item.title}</span>
                             {
-                            index === slideIndex && (<img src={item.image} alt="image" />)
+                            index === slideIndex && (<img src={item.image} alt={item.title} />)
                             }
                         </div>
                     )

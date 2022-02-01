@@ -1,14 +1,17 @@
 import React from 'react';
-import Banner from '../components/Banner';
-import images from '../context/ImagesData';
 // components
 import Header from '../components/shared/Header';
+import Banner from '../components/Banner';
+import Services from '../components/Services';
+import Popular from '../components/Popular';
 
 const Landing = () => {
     return (
         <>
         <Header />
         <Banner />
+        <Services />
+        <Popular />
         </>
     );
 };

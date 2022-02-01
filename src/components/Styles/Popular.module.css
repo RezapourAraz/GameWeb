@@ -1,0 +1,69 @@
+.container {
+    width: 1024px;
+    margin: 10px auto;
+}
+.GameCarts {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.text {
+    padding: 10px;
+    margin: 20px 0;
+}
+.text h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ffd369;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        margin: 10px auto;
+    }
+    .GameCarts {
+        display: grid;
+        align-items: center;
+        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .text {
+        width: auto;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        width: auto;
+        margin: 10px auto;
+    }
+    .GameCarts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+   
+}
+@media (max-width: 620px) {
+    .container {
+        width: auto;
+        margin: 10px auto;
+    }
+    .GameCarts {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        width: auto;
+    }
+    .GameCarts {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+    }
+}

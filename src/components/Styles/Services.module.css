@@ -1,0 +1,43 @@
+.container {
+    width: 1024px;
+    margin: 20px auto;
+    padding: 10px 0;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffd369;
+    display: flex;
+}
+
+.container span img {
+    width: 40px;
+    height: 40px;
+}
+
+.container div {
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.container div h4 {
+    color: #ffd369;
+}
+.container div p {
+    color: #EEEEEE;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 20px 10px;
+    }
+}
+@media (max-width: 425px) {
+    .container {
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 20px 10px;
+    }
+}

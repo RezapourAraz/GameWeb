@@ -28,7 +28,8 @@ const Nav = styled.nav`
         width: 300px;
         height: 100vh;
         transition: .3s ease-in-out;
-        z-index: 1;
+        z-index: 3;
+        background-color: #222831;
         transform: ${({open}) => open ? "translateX(0)" : "translateX(-100%)" };
         ul {
             flex-direction: column;
