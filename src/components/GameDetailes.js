@@ -5,12 +5,12 @@ import styles from './Styles/GameDetailes.module.css';
 import ConsolImage from './shared/ConsolImage';
 
 const GameDetailes = ({data}) => {
-    console.log(data);
+    
     return (
         <div className={styles.container}>
             <img className={styles.background} src={data.background_image} alt="" />
             <div className={styles.infoContainer}>
-                <div>
+                <div className={styles.contentInfo}>
                     <div className={styles.platformInfo}>
                         <p>{data.released}</p>
                         <div className={styles.platformName}>
@@ -34,6 +34,9 @@ const GameDetailes = ({data}) => {
                         {
                             data.tags.map(item => <p key={item.id}> #{item.name}</p>)
                         }
+                    </div>
+                    <div className={styles.btns}>
+                        <button>ADD TO WISHLIST</button>
                     </div>
                 </div>
                 <div className={styles.screenshots}>

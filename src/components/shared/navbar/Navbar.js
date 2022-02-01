@@ -51,8 +51,6 @@ const Navbar = ({open}) => {
             <ul>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/games'>Games</Link></li>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/'>Home</Link></li>
             </ul>
         </Nav>
     );

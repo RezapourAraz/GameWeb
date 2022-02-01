@@ -8,7 +8,6 @@ import styles from './Styles/Popular.module.css';
 const GamesList = () => {
 
     const games = useContext(GamesContext);
-    console.log(games);
 
     return (
         <section className={styles.container}>

@@ -10,6 +10,12 @@
     filter: opacity(.15);
     z-index: -1;
 }
+.contentInfo {
+    
+    padding: 5px;
+    border-radius: 10px;
+    height: fit-content;
+}
 .infoContainer {
     width: 1024px;
     margin: 20px auto;
@@ -105,6 +111,27 @@
     padding: 2px;
     margin: 2px;
 }
+.btns {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.btns button {
+    padding: 7px 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #ffd369;
+    color: #222831;
+    font-weight: bold;
+    border: 2px solid #ffd369;
+    cursor: pointer;
+}
+
+.btns button:hover {
+    filter: sepia(5);
+}
 
 @media (max-width: 1024px) {
     .infoContainer {
@@ -132,5 +159,8 @@
     }
     .screenshots img:hover {
         transform: scale(1.05);
+    }
+    .gameTags p {
+        font-size: .5rem;
     }
 }
