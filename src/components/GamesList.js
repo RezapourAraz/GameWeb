@@ -1,27 +1,28 @@
 import React, { useContext } from 'react';
 // Context
-import { PopularContext} from '../context/PopularContextProvider';
-// Components
+import { GamesContext } from '../context/GamesContextProvider';
 import GameCart from './shared/GameCart';
-// Styles
+// Styles 
 import styles from './Styles/Popular.module.css';
 
-const Popular = () => {
+const GamesList = () => {
 
-    const populars = useContext(PopularContext);
+    const games = useContext(GamesContext);
+    console.log(games);
 
     return (
         <section className={styles.container}>
             <div className={styles.text}>
-                <h2>New Released</h2>
+                <h2>Games</h2>
             </div>
             <div className={styles.GameCarts}>
                 {
-                populars.map(item => <GameCart key={item.id} itemData={item} />)
+                games.map(item => <GameCart key={item.id} itemData={item} />)
                 }
             </div>
+
         </section>
     );
 };
 
-export default Popular;
+export default GamesList;

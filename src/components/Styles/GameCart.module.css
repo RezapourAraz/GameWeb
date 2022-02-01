@@ -14,11 +14,12 @@
 }
 .image {
     width: 100%;
+    min-height: 175px;
     overflow: hidden;
 }
 .image img {
     width: 100%;
-    min-width: 170px;
+    height: 175px;
     transition: all .3s ease-in-out;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -58,10 +59,10 @@
 .date a {
     display: flex;
     text-align: end;
-    color: #406882;
+    color: #EEEEEE;
 }
 .date a:hover {
-    color: #1A374D;
+    color: #ff0000;
 }
 
 .platformName {

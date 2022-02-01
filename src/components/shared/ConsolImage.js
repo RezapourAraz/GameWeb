@@ -9,20 +9,19 @@ import NintendoSwitch from '../../assets/icons/nintendo.svg';
 
 const ConsolImage = ({data}) => {
     const name = data
-    console.log(name);
     return (
         <div className={styles.container}>
             {
-                name === "PlayStation" && <img src={PlayStation} alt="" />
+                name === "PlayStation" && <img className={styles.platform} src={PlayStation} alt="" />
             }
             {
-                name === "PC" && <img src={PC} alt="" />
+                name === "PC" && <img className={styles.platform} src={PC} alt="" />
             }
             {
-                name === "Xbox" && <img src={Xbox} alt="" />
+                name === "Xbox" && <img className={styles.platform} src={Xbox} alt="" />
             }
             {
-                name === "Nintendo" && <img src={NintendoSwitch} alt="" />
+                name === "Nintendo" && <img className={styles.platform} src={NintendoSwitch} alt="" />
             }
         </div>
     );

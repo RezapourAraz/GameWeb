@@ -32,7 +32,7 @@ const GameCart = ({itemData}) => {
                     <img src={calendar} alt="" />
                     <p>{itemData.released}</p>
                 </div>
-                <Link to='/'>See More</Link>
+                <Link to={`/detaile/${itemData.id}`}>Detailes</Link>
             </div>
         </div>
     );

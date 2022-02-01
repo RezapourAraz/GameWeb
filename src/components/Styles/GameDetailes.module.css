@@ -1,0 +1,136 @@
+.container {
+    margin: 10px auto;
+    align-items: center;
+}
+.container .background{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    filter: opacity(.15);
+    z-index: -1;
+}
+.infoContainer {
+    width: 1024px;
+    margin: 20px auto;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+}
+.platformInfo {
+    display: flex;
+    align-items: center;
+}
+
+.container h2 {
+    font-size: 3rem;
+    margin: 10px 0;
+    color: #EEEEEE;
+}
+.container span {
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #ffd369;
+}
+
+
+.platformInfo p {
+    margin: 5px 0;
+    padding: 5px 10px;
+    display: inline-block;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.platformName {
+    position: inherit;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.screenshots {
+    background-color: rgba(0, 0, 0, .5);
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.screenshots img {
+    width: 230px;
+    margin: 5px auto;
+    border-radius: 5px;
+}
+.screenshots img:nth-child(1) {
+    width: 100%;
+    border-radius: 5px;
+}
+.screenshots img:hover {
+    transform: scale(1.1);
+}
+.esrb {
+    padding: 5px 0;
+    margin: 5px 0;
+}
+.esrb p {
+    padding: 5px;
+    display: inline-block;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.esrb p span {
+    color: #ff2000;
+}
+
+.update {
+    display: inline-block;
+}
+.update h5 {
+    padding: 5px ;
+    background-color: #00fa60;
+    border-radius: 5px;
+}
+.gameTags {
+    margin: 10px 0;
+}
+.gameTags span {
+    display: block;
+}
+.gameTags p {
+    display: inline-flex;
+    font-size: .7rem;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 2px;
+}
+
+@media (max-width: 1024px) {
+    .infoContainer {
+        width: auto;
+    }
+    .screenshots img {
+        width: 150px;
+    }
+}
+@media (max-width: 768px) {
+    .screenshots img {
+        width: 150px;
+    }
+}
+@media (max-width: 600px) {
+    .infoContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .screenshots {
+        margin: 20px auto;
+    }
+    
+    .container h2 {
+        font-size: 2rem;
+    }
+    .screenshots img:hover {
+        transform: scale(1.05);
+    }
+}

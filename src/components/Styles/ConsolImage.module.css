@@ -1,7 +1,7 @@
 .container {
     display: flex;
 }
-.container img {
+.container .platform {
     width: 20px;
     margin: 0 5px;
 }
