@@ -11,3 +11,14 @@
 .title h2 {
     color: #ffd369;
 }
+@media (max-width: 1024px) {
+    .container {
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: auto;
+    }
+}

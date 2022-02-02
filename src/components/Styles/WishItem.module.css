@@ -45,3 +45,37 @@
 .btns button:hover {
     filter: sepia(2);
 }
+
+@media (max-width: 1024px) {
+    .container {
+        width: auto;
+        margin: 5px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: auto;
+        margin: 5px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        height: 80px;
+    }
+    .image img {
+        width: 70px;
+        height: 50px;
+    }
+    .text h4 {
+        font-size: .8rem;
+    }
+    .btns {
+        width: 70px;
+    }
+    .btns button {
+        padding: 2px 4px;
+        font-size: .5rem;
+    }
+}
