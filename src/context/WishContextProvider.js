@@ -20,6 +20,7 @@ const wishReducer = (state, action) => {
             }
         case "REMOVE_ITEM":
             const newwihlist = state.wishList.filter(item => item.id !== action.payload.id)
+            state.counter--
             return {
                 ...state,
                 wishList: [...newwihlist],
