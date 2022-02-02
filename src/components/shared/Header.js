@@ -7,6 +7,7 @@ import heart from '../../assets/icons/heart.svg';
 import userIcon from '../../assets/icons/user.svg';
 // Styles
 import styles from './Header.module.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -25,7 +26,7 @@ const Header = () => {
                     <img src={userIcon} alt="User Icon" />
                 </div>
                 <div className={styles.shoppingBtn}>
-                    <img src={heart} alt="Shopping Bag Icon" />
+                    <Link to='/wishlist'><img src={heart} alt="Heart icon" /></Link>
                     <span>1</span>
                 </div>
             </div>

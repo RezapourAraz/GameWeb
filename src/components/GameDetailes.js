@@ -47,8 +47,8 @@ const GameDetailes = ({data}) => {
                     <div className={styles.btns}>
                         {
                         isInList(state, id) ?
-                        <button onClick={() => dispatch({type: "ADD_ITEM", payload: data })}>ADD TO WISHLIST</button> :
-                        <button onClick={() => dispatch({type: "REMOVE_ITEM", payload: data })}>REMOVE ITEM</button>
+                        <button className={styles.add} onClick={() => dispatch({type: "ADD_ITEM", payload: data })}>ADD TO WISHLIST</button> :
+                        <button className={styles.remove} onClick={() => dispatch({type: "REMOVE_ITEM", payload: data })}>REMOVE ITEM</button>
                         }
                     </div>
                 </div>

@@ -7,6 +7,8 @@ import WishContextProvider from "./context/WishContextProvider";
 import Landing from "./pages/Landing";
 import Games from "./pages/Games";
 import Detaile from "./pages/Detaile";
+import WishList from "./pages/WishList";
+
 function App() {
   return (
     <GamesContextProvider>
@@ -16,6 +18,7 @@ function App() {
             <Route path='/' element={<Landing />} />
             <Route path='/games' element={<Games />} />
             <Route path='/detaile/:id' element={<Detaile />} />
+            <Route path='wishlist' element={<WishList />} />
           </Routes>
         </WishContextProvider>
       </PopularContextProvider>

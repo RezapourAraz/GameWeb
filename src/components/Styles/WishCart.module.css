@@ -1,0 +1,13 @@
+.container {
+    width: 1024px;
+    margin: 10px auto;
+}
+.container .title {
+    margin: 20px 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.title h2 {
+    color: #ffd369;
+}
