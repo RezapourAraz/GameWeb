@@ -8,14 +8,13 @@ import WishItem from './WishItem';
 
 const WishCart = () => {
 
-    const { state, dispatch } = useContext(WishContext);
+    const { state } = useContext(WishContext);
 
     return (
         <section className={styles.container}>
             <div className={styles.title}>
                 <h2>Your Wishlist</h2>
             </div>
-            
                 {
                 state.wishList === '' ? <h3>No Item</h3> : state.wishList.map(item => <WishItem key={item.id} data={item} />)
                 }

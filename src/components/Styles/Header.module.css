@@ -1,4 +1,5 @@
 .container {
+    position: sticky;
     width: 1024px;
     margin: 0 auto;
     display: flex;
@@ -6,7 +7,11 @@
     padding: 10px 5px;
     align-items: center;
     border-bottom: 2px solid #FFD369;
-    border-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #222831;
+    z-index: 10;
+    top: 0;
 }
 
 .logo h3 {
@@ -61,7 +66,7 @@
         margin: 0 10px;
     }
     .logo {
-        margin-left: 40px;
+        margin-left: 50px;
     }
     .logo h3 {
         font-size: 1.1rem;

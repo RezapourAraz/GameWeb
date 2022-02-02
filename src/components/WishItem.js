@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 // Styles
 import styles from './Styles/WishItem.module.css';
 // Ccontext
@@ -8,7 +9,7 @@ const WishItem = ({data}) => {
     const { dispatch } = useContext(WishContext);
 
     return (
-        <div className={styles.container}>
+        <Link to={`/detaile/${data.id}`} className={styles.container}>
             <div className={styles.image}>
                 <img src={data.background_image} alt="" />
             </div>
@@ -20,7 +21,7 @@ const WishItem = ({data}) => {
                 <button onClick={() => dispatch({type: "REMOVE_ITEM", payload: data})}>REMOVE ITEM</button>
                 }
             </div>
-        </div>
+        </Link>
     );
 };
 

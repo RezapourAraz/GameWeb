@@ -22,6 +22,7 @@
 
 @media (max-width: 1024px) {
     .container {
+        width: auto;
         margin: 10px auto;
     }
     .GameCarts {
@@ -29,13 +30,13 @@
         align-items: center;
         justify-content: space-between;
         grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+        gap: 5px;
     }
     .text {
         width: auto;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .container {
         width: auto;
         margin: 10px auto;

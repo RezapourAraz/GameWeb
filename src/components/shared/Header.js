@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 // Components
 import Hamburger from './navbar/Hamburger';
 import { WishContext } from '../../context/WishContextProvider';
+import Search from './Search';
 // Icons
-import searchIcon from '../../assets/icons/search1.svg';
 import heart from '../../assets/icons/heart.svg';
 import userIcon from '../../assets/icons/user.svg';
 // Styles
-import styles from './Header.module.css';
-import { Link } from 'react-router-dom';
+import styles from '../Styles/Header.module.css';
 
 const Header = () => {
 
@@ -23,9 +23,7 @@ const Header = () => {
                 <Hamburger />
             </div>
             <div className={styles.icons}>
-                <div className={styles.searchBtn}>
-                    <img src={searchIcon} alt="Search Icon" />
-                </div>
+                <Search />
                 <div className={styles.userBtn}>
                     <img src={userIcon} alt="User Icon" />
                 </div>

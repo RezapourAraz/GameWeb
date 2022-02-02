@@ -11,7 +11,6 @@ import { isInList } from '../helper/functions';
 const GameDetailes = ({data}) => {
 
     const { state, dispatch } = useContext(WishContext);
-    console.log(state);
     const {id} = data
     
     
@@ -54,7 +53,7 @@ const GameDetailes = ({data}) => {
                 </div>
                 <div className={styles.screenshots}>
                     {
-                        data.short_screenshots.map(item => <img key={item.id} src={item.image}  />)
+                        data.short_screenshots.map(item => <img key={item.id} src={item.image} alt="game Screenshots"  />)
                     }
                 </div>
             </div>

@@ -44,9 +44,13 @@ const Section = styled.section`
         border-bottom-right-radius: 10px;
         transition: all .4s ease-in-out;
     }
+    @media (max-width: 1024px) {
+        width: auto;
+        margin: 40px 20px;
+    }
     @media (max-width: 768px) {
         width: auto;
-        margin: 30px 20px;
+        margin: 40px 20px;
         height: 400px;
         .title {
             font-size: 1.2rem;
@@ -56,12 +60,12 @@ const Section = styled.section`
         width: auto;
         height: 300px;
         .title {
-            font-size: 1rem;
+            font-size: .8rem;
         }
     }
 `;
 
-const Banner = ({items}) => { 
+const Banner = () => { 
     
     const [ slideIndex, setSlideIndex ] = useState(0);
     const length = images.length;
