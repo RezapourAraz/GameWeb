@@ -6,8 +6,7 @@ import styles from './Styles/Popular.module.css';
 
 const GamesList = () => {
 
-    // const games = useContext(GamesContext);
-    const { popular, upComing, newGames} = useSelector(state => state.games)
+    const { allGames} = useSelector(state => state.games)
 
     return (
         <section className={styles.container}>
@@ -16,20 +15,9 @@ const GamesList = () => {
             </div>
             <div className={styles.GameCarts}>
                 {
-                popular.map(item => <GameCart key={item.id} itemData={item} />)
+                allGames.map(item => <GameCart key={item.id} itemData={item} />)
                 }
             </div>
-            <div className={styles.GameCarts}>
-                {
-                upComing.map(item => <GameCart key={item.id} itemData={item} />)
-                }
-            </div>
-            <div className={styles.GameCarts}>
-                {
-                newGames.map(item => <GameCart key={item.id} itemData={item} />)
-                }
-            </div>
-
         </section>
     );
 };

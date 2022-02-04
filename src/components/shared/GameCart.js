@@ -7,8 +7,6 @@ import ConsolImage from './ConsolImage';
 import { Link } from 'react-router-dom';
 
 const GameCart = ({itemData}) => {
-    
-
     const { parent_platforms } = itemData;
     
     return (

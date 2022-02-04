@@ -11,9 +11,8 @@ import { isInList } from '../helper/functions';
 const GameDetailes = ({data}) => {
 
     const { wishlist } = useSelector(state => state.wishList);
-    const {id} = data
+    const { id } = data
     const dispatch = useDispatch(wishAction)
-    
     return (
         <div className={styles.container}>
             <img className={styles.background} src={data.background_image} alt="" />
@@ -32,7 +31,10 @@ const GameDetailes = ({data}) => {
                         data.genres.map(item => <span key={item.id}> #{item.name}</span>)
                     }
                     <div className={styles.esrb}>
-                        <p>ESRB: <span>{data.esrb_rating}</span></p>
+                        {
+                            data.esrb_rating ? <p>ESRB: <span>{data.esrb_rating.name}</span></p> : <p>ESRB: <span>Not available</span></p>
+                        }
+                        {/* <p>ESRB: <span>{data.esrb_rating.name}</span></p> */}
                     </div>
                     <div className={styles.update}>
                         <h5>UPDATED: {data.updated}</h5>

@@ -7,10 +7,9 @@ import GameDetailes from '../components/GameDetailes';
 
 const Detaile = () => {
     const params = useParams()
-    
-    const { upComing } = useSelector(state => state.games);
+    const { allGames } = useSelector(state => state.games);
     const game = [];
-    upComing.map(item => {
+    allGames.map(item => {
         if (item.id === Number(params.id)) {
             game.push(item)
         }
