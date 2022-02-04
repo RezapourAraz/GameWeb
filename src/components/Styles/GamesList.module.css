@@ -4,10 +4,6 @@
     border-radius: 0 10px 10px 10px;
 }
 .GameCarts {
-    display: none;
-}
-
-.active {
     display: grid;
     padding: 10px;
     align-items: center;
@@ -15,7 +11,16 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
     background: rgba(0, 0, 0, .2);
-    border-radius: 0 10px 10px 10px;
+    border-radius: 10px;
+}
+
+.text {
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+}
+.text h2 {
+    color: #ffd369;
 }
 
 @media (max-width: 1024px) {
@@ -23,7 +28,7 @@
         width: auto;
         margin: 10px auto;
     }
-    .active {
+    .GameCarts {
         display: grid;
         align-items: center;
         justify-content: space-between;
@@ -39,7 +44,7 @@
         width: auto;
         margin: 10px auto;
     }
-    .active {
+    .GameCarts {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -50,7 +55,7 @@
         width: auto;
         margin: 10px auto;
     }
-    .active{
+    .GameCarts {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
@@ -60,7 +65,7 @@
     .container {
         width: auto;
     }
-    .active {
+    .GameCarts {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 5px;

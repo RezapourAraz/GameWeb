@@ -11,6 +11,20 @@
 .title h2 {
     color: #ffd369;
 }
+
+.text {
+    text-align: center;
+    padding: 10px;
+    color: #EEEEEE;
+}
+
+.btn {
+    display: block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    color: #EEEEEE;
+}
+
 @media (max-width: 1024px) {
     .container {
         width: auto;

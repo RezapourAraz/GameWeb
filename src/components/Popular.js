@@ -9,7 +9,7 @@ import styled from 'styled-components';
 const Div = styled.div`
     margin-top: 20px;
     .tablinks {
-        // #222831
+        
         padding: 10px 15px;
         border: none;
         outline: none;
@@ -26,6 +26,12 @@ const Div = styled.div`
         border-top: 2px solid #ffd369;
         background: rgba(0, 0, 0, .2);
         color: #ffd369;
+    }
+    @media (max-width: 425px ) {
+        .tablinks {
+            padding: 6px 10px;
+            font-size: .6rem;
+        }
     }
 `;
 

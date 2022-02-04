@@ -27,9 +27,11 @@
     margin: 20px 0;
     display: flex;
     justify-content: center;
+    min-width: 80px;
 }
 
 .btns button {
+    
     padding: 7px 15px;
     border: none;
     border-radius: 5px;

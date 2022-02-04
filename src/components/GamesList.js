@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import GameCart from './shared/GameCart';
 // Styles 
-import styles from './Styles/Popular.module.css';
+import styles from './Styles/GamesList.module.css';
 
 const GamesList = () => {
 
