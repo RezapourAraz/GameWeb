@@ -9,8 +9,8 @@ const getTopRank = (games) => {
     return tops;
 }
 
-const isInList = (state, id) => {
-    const result = !state.wishList.find(item => item.id === id)
+const isInList = (wishlist, id) => {
+    const result = !wishlist.find(item => item.id === id)
     return result;
 }
 

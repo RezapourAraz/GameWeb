@@ -1,10 +1,10 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 // Icons
 import searchIcon from '../../assets/icons/search1.svg';
 // Styles
 import styled from 'styled-components';
 // Context
-import { GamesContext } from '../../context/GamesContextProvider';
+
 import SearchBox from './SearchBox';
 
 const Div = styled.div`
@@ -76,9 +76,8 @@ const Search = () => {
         setSearch(e.target.value)
     }
     
-    const games = useContext(GamesContext);
-    const searched = games.filter(item => item.name.toLowerCase().includes(search.toLowerCase()));
-    console.log(searched);
+    // const searched = games.filter(item => item.name.toLowerCase().includes(search.toLowerCase()));
+    // console.log(searched);
     return (
         <Div  open={open}>
             <img onClick={() => setOpen(!open)} src={searchIcon} alt="Search Icon" />
@@ -87,7 +86,7 @@ const Search = () => {
                 {
                 search.length === 0 ? null : 
                 <div className='searchbox'>
-                    {searched.map(item =><SearchBox key={item.id}  data={item}/>)}
+                    
                 </div>
                 } 
             </div>

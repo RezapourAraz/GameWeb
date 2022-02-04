@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 // Components
 import Hamburger from './navbar/Hamburger';
-import { WishContext } from '../../context/WishContextProvider';
 import Search from './Search';
 // Icons
 import heart from '../../assets/icons/heart.svg';
@@ -11,8 +10,6 @@ import userIcon from '../../assets/icons/user.svg';
 import styles from '../Styles/Header.module.css';
 
 const Header = () => {
-
-    const { state } = useContext(WishContext)
 
     return (
         <header className={styles.container}>
@@ -29,9 +26,6 @@ const Header = () => {
                 </div>
                 <div className={styles.wishBtn}>
                     <Link to='/wishlist'><img src={heart} alt="Heart icon" /></Link>
-                    {
-                    state.counter >= 1 && <span>{state.counter}</span> 
-                    }
                 </div>
             </div>
         </header>

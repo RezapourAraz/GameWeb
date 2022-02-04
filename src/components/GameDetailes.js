@@ -1,18 +1,18 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import wishAction from '../actions/wishAction';
 // Styles
 import styles from './Styles/GameDetailes.module.css';
 // Components
 import ConsolImage from './shared/ConsolImage';
-// Context
-import { WishContext } from '../context/WishContextProvider';
 // Function
 import { isInList } from '../helper/functions';
 
 const GameDetailes = ({data}) => {
 
-    const { state, dispatch } = useContext(WishContext);
+    const { wishlist } = useSelector(state => state.wishList);
     const {id} = data
-    
+    const dispatch = useDispatch(wishAction)
     
     return (
         <div className={styles.container}>
@@ -32,7 +32,7 @@ const GameDetailes = ({data}) => {
                         data.genres.map(item => <span key={item.id}> #{item.name}</span>)
                     }
                     <div className={styles.esrb}>
-                        <p>ESRB: <span> {data.esrb_rating.name}</span></p>
+                        <p>ESRB: <span>{data.esrb_rating}</span></p>
                     </div>
                     <div className={styles.update}>
                         <h5>UPDATED: {data.updated}</h5>
@@ -45,7 +45,7 @@ const GameDetailes = ({data}) => {
                     </div>
                     <div className={styles.btns}>
                         {
-                        isInList(state, id) ?
+                        isInList(wishlist, id) ?
                         <button className={styles.add} onClick={() => dispatch({type: "ADD_ITEM", payload: data })}>ADD TO WISHLIST</button> :
                         <button className={styles.remove} onClick={() => dispatch({type: "REMOVE_ITEM", payload: data })}>REMOVE ITEM</button>
                         }

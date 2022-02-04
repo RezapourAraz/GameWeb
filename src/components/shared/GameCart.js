@@ -29,7 +29,7 @@ const GameCart = ({itemData}) => {
             </div>
             <div className={styles.date}>
                 <div className={styles.dateTags}>
-                    <img src={calendar} alt="" />
+                    <img src={calendar} alt='calendar' />
                     <p>{itemData.released}</p>
                 </div>
                 <Link to={`/detaile/${itemData.id}`}>Detailes</Link>

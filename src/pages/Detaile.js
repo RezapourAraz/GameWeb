@@ -1,22 +1,21 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-// Context
-import { GamesContext } from '../context/GamesContextProvider';
 // components
 import Header from '../components/shared/Header';
 import GameDetailes from '../components/GameDetailes';
 
 const Detaile = () => {
     const params = useParams()
-    const games = useContext(GamesContext);
+    
+    const { upComing } = useSelector(state => state.games);
     const game = [];
-    games.map(item => {
-        if (item.id == params.id) {
+    upComing.map(item => {
+        if (item.id === Number(params.id)) {
             game.push(item)
         }
         return game;
     })
-    
     return (
         <>
             <Header />
