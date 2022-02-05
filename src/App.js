@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route , Navigate } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
 import fetchGames from "./actions/gameAction";
@@ -22,6 +22,7 @@ function App() {
         <Route path="/games" element={<Games />} />
         <Route path="/detaile/:id" element={<Detaile />} />
         <Route path="/wishlist" element={<WishList />} />
+        <Route path="/*" element={<Navigate to="/" />}/>
       </Routes>
   );
 }

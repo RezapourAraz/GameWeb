@@ -23,6 +23,10 @@
     padding: 10px 15px;
     margin-top: 10px;
     color: #EEEEEE;
+    cursor: pointer;
+}
+.btn:hover {
+    color: #ffd369;
 }
 
 @media (max-width: 1024px) {
