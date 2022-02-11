@@ -4,6 +4,7 @@ import Header from '../components/shared/Header';
 import Banner from '../components/Banner';
 import Services from '../components/Services';
 import Popular from '../components/Popular';
+import Footer from '../components/Footer';
 
 const Landing = () => {
     return (
@@ -12,6 +13,7 @@ const Landing = () => {
         <Banner />
         <Services />
         <Popular />
+        <Footer />
         </>
     );
 };

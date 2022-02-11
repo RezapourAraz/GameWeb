@@ -1,6 +1,11 @@
 .container {
     width: 1024px;
-    margin: 10px auto;
+    margin: 15px auto;
+    padding: 10px 10px 40px 10px;
+    min-height: calc(100vh - 135px);
+    background-color: #393E46;
+    border-radius: 5px;
+    position: relative;
 }
 .container .title {
     margin: 20px 0;
@@ -24,6 +29,8 @@
     margin-top: 10px;
     color: #EEEEEE;
     cursor: pointer;
+    position: absolute;
+    bottom: 0px;
 }
 .btn:hover {
     color: #ffd369;

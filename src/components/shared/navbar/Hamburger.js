@@ -18,7 +18,7 @@ const Div = styled.div`
     }
     @media (max-width: 768px) {
         display: block;
-        position: absolute;
+        position: ${({open}) => open ? "fixed" : "absolute" };
         top: 10px;
         left: 15px;
         z-index: 5;

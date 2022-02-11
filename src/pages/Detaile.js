@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 // components
 import Header from '../components/shared/Header';
 import GameDetailes from '../components/GameDetailes';
+import Footer from '../components/Footer';
 
 const Detaile = () => {
     const params = useParams()
@@ -21,6 +22,7 @@ const Detaile = () => {
             {
                 game.map(item => <GameDetailes key={item.id} data={item} /> )
             }
+            <Footer />
         </>
     );
 };

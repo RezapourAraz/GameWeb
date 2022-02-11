@@ -20,7 +20,7 @@ const Nav = styled.nav`
         }
     }
     @media (max-width: 768px) {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         padding: 10px;

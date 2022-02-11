@@ -1,0 +1,128 @@
+.container{
+    background-color: #393E46;
+    margin-top: 50px;
+}
+.footercContainer {
+    width: 1024px;
+    margin: 0 auto;
+    padding: 25px 15px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px 10px 0 0;
+}
+.logo h2{
+    color: #EEEEEE;
+}
+
+.logo h2 span {
+    color: #FFd369;
+}
+
+.footercContainer nav {
+    padding: 5px;
+}
+.footercContainer nav ul li a{
+    color: #EEEEEE;
+    padding: 5px;
+    font-size: .8rem;
+    transition: all .3 ease-in-out;
+}
+.footercContainer nav ul {
+    color: #FFd369;
+    text-align: start;
+}
+.footercContainer nav ul h3 {
+    padding: 5px;
+    font-size: 1rem;
+}
+.footercContainer nav ul li a:hover {
+    color: #FFd369;
+    
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+}
+.news label {
+    color: #FFd369;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px;
+}
+.news span {
+    color: #EEEEEE;
+    font-size: .7rem;
+    padding: 5px;
+}
+.news div input {
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 3px 0 0 3px;
+}
+.news div button {
+    padding: 5px;
+    background-color: #FFd369;
+    outline: none;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all .3 ease-in-out;
+}
+.news div button:hover {
+    background-color: #EEEEEE;
+}
+.news div input::placeholder {
+    color: #393E46;
+    font-size: .7rem;
+}
+
+.created {
+    width: 1024px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #EEEEEE;
+}
+.created h5 {
+    color: #EEEEEE;
+}
+
+.created h5 span {
+    color: #FFd369;
+}
+
+@media (max-width: 1024px ) {
+    .footercContainer {
+        width: auto;
+    }
+    .created {
+        width: auto;
+    }
+}
+@media (max-width: 768px ) {
+    .footercContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: auto;
+        text-align: center;
+    }
+    .created {
+        width: auto;
+    }
+    .footercContainer nav ul {
+        text-align: center;
+    }
+}
+@media (max-width: 500px ) {
+    .footercContainer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: auto;
+        text-align: center;
+    }
+    .created {
+        width: auto;
+    }
+}

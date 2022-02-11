@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Routes, Route , Navigate } from "react-router-dom";
-
+// Redux
 import { useDispatch } from "react-redux";
 import fetchGames from "./actions/gameAction";
 // Components
